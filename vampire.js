@@ -42,6 +42,30 @@ class Vampire {
 
   // Returns the vampire object with that name, or null if no vampire exists with that name
   vampireWithName(name) {
+    if (this.name === name) {
+      return this;
+    } else {
+      for (let child of this.offspring) {
+        return child.vampireWithName(name);
+      }
+    }
+    return null;
+  }
+
+  // Returns the total number of vampires that exist
+  get totalDescendents() {
+    
+  }
+
+  // Returns an array of all the vampires that were converted after 1980
+  get allMillennialVampires() {
+    
+  }
+
+  /** Tree traversal methods **/
+
+  // Returns the vampire object with that name, or null if no vampire exists with that name
+  vampireWithName(name) {
     
   }
 
